@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="placesMenu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>My Offers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size-md="2" size-xs="0"></ion-col>
+    <ion-col size-md="8" size-xs="12">
+      <ion-list>
+        <ion-item *ngFor="let place of places" [routerLink]="['./', place.id]">
+          <ion-avatar slot="start">
+            <ion-img [src] = "place.imageUrl"></ion-img>
+          </ion-avatar>
+          <ion-label>
+            <h2>{{ place.title }}</h2>
+            <p>{{ place.description }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+    <ion-col size-md="2" size-xs="0"></ion-col>
+  </ion-row>
+</ion-content>

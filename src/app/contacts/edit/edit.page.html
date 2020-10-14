@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>edit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form">
+    <ion-list>
+      <!-- <ion-item> -->
+      <!-- <ion-label position="floating">id</ion-label> -->
+      <ion-input type="hidden" formControlName="id" [(ngModel)]="loadedContact.id"></ion-input>
+      <!-- </ion-item> -->
+      <ion-item>
+        <ion-label position="floating">name</ion-label>
+        <ion-input type="text" formControlName="name" [(ngModel)]="loadedContact.name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">telepon</ion-label>
+        <ion-input type="text" formControlName="telepon" [(ngModel)]="loadedContact.telepon"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="text" formControlName="email" [(ngModel)]="loadedContact.email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Image URL</ion-label>
+        <ion-input type="text" formControlName="imageUrl" [(ngModel)]="loadedContact.imageUrl"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <ion-button (click)="onSubmit()">Submit</ion-button>
+  </form>
+</ion-content>

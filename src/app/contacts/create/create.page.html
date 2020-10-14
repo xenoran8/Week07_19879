@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>create</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form #form="ngForm" (ngSubmit)=onSubmit(form)>
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">id</ion-label>
+        <ion-input type="text" ngModel name="id" #idCtrl="ngModel" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">nama</ion-label>
+        <ion-input type="text" ngModel name="name" #namaCtrl="ngModel" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="email" ngModel name="email" #emailCtrl="ngModel" required email></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">telepon</ion-label>
+        <ion-input type="text" ngModel name="telepon" #teleponCtrl="ngModel" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">image url</ion-label>
+        <ion-input type="text" ngModel name="imageUrl" #imageUrlCtrl="ngModel" required></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <ion-button type="submit" color="primary" expand="block" (click)="onCreate()" [disabled]="!form.valid">Buat</ion-button>
+  </form>
+</ion-content>
